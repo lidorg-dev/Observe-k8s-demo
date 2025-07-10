@@ -61,7 +61,7 @@ jinja2==2.11.3
 markupsafe==1.1.1
     # via jinja2
 
-protobuf==3.13.0
+protobuf==4.25.8
     # via
     #   google-api-core
     #   google-cloud-profiler
@@ -97,7 +97,7 @@ six==1.15.0
     #   protobuf
 uritemplate==3.0.1
     # via google-api-python-client
-urllib3==1.25.10
+urllib3==2.5.0
     # via requests
 opentelemetry-api==1.10.0
 opentelemetry-sdk==1.10.0
