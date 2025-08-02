@@ -23,7 +23,7 @@ RUN go build -tags netgo -o /productcatalogservice .
 ARG SKAFFOLD_GO_GCFLAGS
 RUN go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /productcatalogservice .
 
-FROM ubuntu AS release
+FROM ubuntu:24.10 AS release
 RUN apt-get update
 RUN apt-get install wget -y
 
