@@ -23,7 +23,7 @@ RUN go mod download
 RUN go build -gcflags='-N -l' -tags netgo -o /checkoutservice .
 # restore dependencies
 
-FROM ubuntu as release
+FROM ubuntu:24.10 as release
 RUN apt-get update
 RUN apt-get install wget -y
 RUN GRPC_HEALTH_PROBE_VERSION=v0.3.6 && \
