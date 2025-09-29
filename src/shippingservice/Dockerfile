@@ -24,7 +24,7 @@ RUN go mod download
 # Skaffold passes in debug-oriented compiler flags
 RUN go build -tags netgo -o shippingservice
 
-FROM ubuntu as release
+FROM ubuntu:24.10 as release
 RUN apt-get update
 RUN apt-get install wget -y
 RUN GRPC_HEALTH_PROBE_VERSION=v0.3.5 && \
