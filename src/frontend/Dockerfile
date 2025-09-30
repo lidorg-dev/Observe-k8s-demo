@@ -7,7 +7,7 @@ RUN go mod tidy
 RUN go mod download
 RUN go build -tags netgo -o main
 
-FROM ubuntu as release
+FROM ubuntu:24.10 as release
 RUN apt-get update
 RUN apt-get install wget -y
 WORKDIR /frontend
